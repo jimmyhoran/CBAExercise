@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="86W-KR-60a" customClass="TransactionTableViewHeaderView" customModule="CBAExercise" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="86W-KR-60a" id="cs6-qT-qGh">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elapsed Days" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoL-6r-u8s">
+                        <rect key="frame" x="250" y="0.0" width="103" height="43.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tB-Sm-utv">
+                        <rect key="frame" x="22" y="0.0" width="36" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="1tB-Sm-utv" secondAttribute="bottom" constant="-0.5" id="24t-Na-v1n"/>
+                    <constraint firstItem="1tB-Sm-utv" firstAttribute="top" secondItem="cs6-qT-qGh" secondAttribute="top" id="9z3-Hj-sbG"/>
+                    <constraint firstAttribute="trailing" secondItem="HoL-6r-u8s" secondAttribute="trailing" constant="22" id="NqQ-gK-dUD"/>
+                    <constraint firstItem="HoL-6r-u8s" firstAttribute="top" secondItem="cs6-qT-qGh" secondAttribute="top" id="Pg8-et-WZ5"/>
+                    <constraint firstItem="1tB-Sm-utv" firstAttribute="leading" secondItem="cs6-qT-qGh" secondAttribute="leading" constant="22" id="dg1-Xl-7D5"/>
+                    <constraint firstAttribute="bottom" secondItem="HoL-6r-u8s" secondAttribute="bottom" id="svJ-yU-dH0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="1tB-Sm-utv" id="jUd-hY-Yrk"/>
+                <outlet property="daysElapsedLabel" destination="HoL-6r-u8s" id="VqO-xt-SEU"/>
+            </connections>
+            <point key="canvasLocation" x="46" y="628"/>
+        </tableViewCell>
+    </objects>
+</document>
