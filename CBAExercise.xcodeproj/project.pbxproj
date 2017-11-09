@@ -22,6 +22,10 @@
 		BE91E31F1FB3C2D200EB0A19 /* TransactionTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE91E3171FB3C2D200EB0A19 /* TransactionTableViewHeaderView.xib */; };
 		BE91E3201FB3C2D200EB0A19 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE91E3181FB3C2D200EB0A19 /* TransactionTableViewCell.swift */; };
 		BE91E3221FB3C38D00EB0A19 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE91E3211FB3C38D00EB0A19 /* UITableViewExtension.swift */; };
+		BE91E3241FB3C94B00EB0A19 /* AccountDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE91E3231FB3C94B00EB0A19 /* AccountDetailsService.swift */; };
+		BE91E3261FB3C97700EB0A19 /* AccountDetailsViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE91E3251FB3C97700EB0A19 /* AccountDetailsViewData.swift */; };
+		BE91E3281FB3C99500EB0A19 /* AccountDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE91E3271FB3C99500EB0A19 /* AccountDetailsTableViewController.swift */; };
+		BE91E33D1FB3D75C00EB0A19 /* FormattingExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE91E33C1FB3D75C00EB0A19 /* FormattingExtensionTests.swift */; };
 		BEAD75671FABD2800081ADE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD75661FABD2800081ADE4 /* AppDelegate.swift */; };
 		BEAD756C1FABD2800081ADE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAD756A1FABD2800081ADE4 /* Main.storyboard */; };
 		BEAD756E1FABD2800081ADE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEAD756D1FABD2800081ADE4 /* Assets.xcassets */; };
@@ -55,6 +59,10 @@
 		BE91E3171FB3C2D200EB0A19 /* TransactionTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionTableViewHeaderView.xib; sourceTree = "<group>"; };
 		BE91E3181FB3C2D200EB0A19 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		BE91E3211FB3C38D00EB0A19 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		BE91E3231FB3C94B00EB0A19 /* AccountDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsService.swift; sourceTree = "<group>"; };
+		BE91E3251FB3C97700EB0A19 /* AccountDetailsViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewData.swift; sourceTree = "<group>"; };
+		BE91E3271FB3C99500EB0A19 /* AccountDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsTableViewController.swift; sourceTree = "<group>"; };
+		BE91E33C1FB3D75C00EB0A19 /* FormattingExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattingExtensionTests.swift; sourceTree = "<group>"; };
 		BEAD75631FABD2800081ADE4 /* CBAExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBAExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAD75661FABD2800081ADE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEAD756B1FABD2800081ADE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,9 +133,18 @@
 			isa = PBXGroup;
 			children = (
 				BEAD757B1FABD2800081ADE4 /* CBAExerciseTests.swift */,
+				BE91E33C1FB3D75C00EB0A19 /* FormattingExtensionTests.swift */,
 				BEAD757D1FABD2800081ADE4 /* Info.plist */,
 			);
 			path = CBAExerciseTests;
+			sourceTree = "<group>";
+		};
+		BEAD75861FABD3650081ADE4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE91E3271FB3C99500EB0A19 /* AccountDetailsTableViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		BEAD75881FABD37E0081ADE4 /* Views */ = {
@@ -149,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				BE91E3031FB3C2A100EB0A19 /* AccountDetailsModel.swift */,
+				BE91E3251FB3C97700EB0A19 /* AccountDetailsViewData.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -162,6 +180,14 @@
 				BE91E30A1FB3C2BC00EB0A19 /* StringExtension.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		BEAD75AE1FAD1BC20081ADE4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BE91E3231FB3C94B00EB0A19 /* AccountDetailsService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,8 +303,11 @@
 				BE91E30D1FB3C2BC00EB0A19 /* StringExtension.swift in Sources */,
 				BE91E31B1FB3C2D200EB0A19 /* TransactionTableViewHeaderView.swift in Sources */,
 				BE91E30C1FB3C2BC00EB0A19 /* DateExtension.swift in Sources */,
+				BE91E3241FB3C94B00EB0A19 /* AccountDetailsService.swift in Sources */,
 				BE91E3221FB3C38D00EB0A19 /* UITableViewExtension.swift in Sources */,
 				BE91E31A1FB3C2D200EB0A19 /* NibLoadableView.swift in Sources */,
+				BE91E3261FB3C97700EB0A19 /* AccountDetailsViewData.swift in Sources */,
+				BE91E3281FB3C99500EB0A19 /* AccountDetailsTableViewController.swift in Sources */,
 				BEAD75671FABD2800081ADE4 /* AppDelegate.swift in Sources */,
 				BE91E3201FB3C2D200EB0A19 /* TransactionTableViewCell.swift in Sources */,
 				BE91E3051FB3C2A100EB0A19 /* AccountDetailsModel.swift in Sources */,
@@ -290,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE91E33D1FB3D75C00EB0A19 /* FormattingExtensionTests.swift in Sources */,
 				BEAD757C1FABD2800081ADE4 /* CBAExerciseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

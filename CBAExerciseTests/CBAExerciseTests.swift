@@ -10,27 +10,32 @@ import XCTest
 @testable import CBAExercise
 
 class CBAExerciseTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+	
+	let service = AccountDetailsService()
+	
+	// Test loading and decoding account details json file
+	func testLoadingAndDecodingAccountDetails() {
+		XCTAssertNotNil(service.loadAccountDetails())
+	}
+	
+	// Test account details view data
+	func testAccountDetailsViewData() {
+		let viewData = AccountDetailsViewData(accountDetails: service.loadAccountDetails())
+		XCTAssertNotNil(viewData)
+		XCTAssertNotNil(viewData.accountInformation)
+	}
+	
+	// Test we have the correct number of grouped transactions by date
+	func testNumberOfTransactionsGroups() {
+		let actualGroupCount = 13
+		let groupedTransactions = AccountDetailsViewData(accountDetails: service.loadAccountDetails()).groupedTransactions
+		XCTAssertEqual(actualGroupCount, groupedTransactions.count)
+	}
+	
+	// Test for the correct number of transactions grouped in a section
+	func testNumberOfTransactionsInGroup() {
+		let actualTransactionsCountInGroup = 2
+		let groupOfTransactions = AccountDetailsViewData(accountDetails: service.loadAccountDetails()).groupedTransactions[0].transactions
+		XCTAssertEqual(actualTransactionsCountInGroup, groupOfTransactions.count)
+	}
 }

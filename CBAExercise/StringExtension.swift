@@ -10,11 +10,12 @@ import UIKit
 
 extension String {
 	
-	func applyFont() -> String {
+	// Append styling tags to a HTML string
+	func appedHTMLFontStyles() -> String {
 		return String(format:"<span style=\"font-family: '-apple-system', 'HelveticaNeue'; font-size: 15\">%@</span>", self)
 	}
 	
-	// Convert HTML string to attribute string
+	// Convert HTML string to attributed string
 	var htmlToAttributedString: NSAttributedString? {
 		do {
 			return try NSAttributedString(data: Data(utf8),
