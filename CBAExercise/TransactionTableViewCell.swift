@@ -51,7 +51,7 @@ class TransactionTableViewCell: UITableViewCell {
 	func configure(viewData: TransactionViewData) {
 		locationImageView.isHidden = (viewData.atm == nil) ? true : false
 		descriptionLabelLeadingConstraint.constant = (viewData.atm == nil) ? 20 : 60
-		descriptionLabel.attributedText = viewData.isPending ? "<b>PENDING:</b> \(viewData.description)".applyFont().htmlToAttributedString : viewData.description.applyFont().htmlToAttributedString
+		descriptionLabel.attributedText = viewData.isPending ? "<b>PENDING:</b> \(viewData.description)".appedHTMLFontStyles().htmlToAttributedString : viewData.description.appedHTMLFontStyles().htmlToAttributedString
 		amountLabel.text = viewData.amount.dollarString
     }
 }
