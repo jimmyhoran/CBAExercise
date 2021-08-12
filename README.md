@@ -1,5 +1,7 @@
 # James Horan CBA Transaction Exercise
 
+James Horan - November 2017
+
 ## About the app
 iPhone/iPad app providing details of a single bank account and a list of different transaction types ordered by date.
 
